@@ -21,7 +21,7 @@ class DeliveryTest {
         $("[data-test-id='phone'] input").setValue(validUser.getPhone());
         $("[data-test-id='agreement']").click();
         $(".button .button__text").click();
-        $(".notification__content").shouldHave(Condition.text("Встреча yt успешно запланирована на " + generateDate(4))).shouldBe(Condition.visible);
+        $(".notification__content").shouldHave(Condition.text("Встреча успешно запланирована на " + generateDate(4))).shouldBe(Condition.visible);
         $(".calendar-input .input__control").sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
         $(".calendar-input .input__control").setValue(generateDate(7));
         $(".button .button__text").click();
